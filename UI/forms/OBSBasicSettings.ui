@@ -138,7 +138,7 @@
          <item>
           <widget class="QScrollArea" name="scrollArea_2">
            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
+            <enum>QFrame::NoFrame</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Plain</enum>
@@ -151,8 +151,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>808</width>
-              <height>989</height>
+              <width>803</width>
+              <height>893</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_19">
@@ -187,19 +187,6 @@
                     <number>2</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label">
-                     <property name="text">
-                      <string>Basic.Settings.General.Language</string>
-                     </property>
-                     <property name="buddy">
-                      <cstring>language</cstring>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="0" column="1">
-                    <widget class="QComboBox" name="language"/>
-                   </item>
-                   <item row="1" column="0">
                     <widget class="QLabel" name="label_42">
                      <property name="text">
                       <string>Basic.Settings.General.Theme</string>
@@ -209,10 +196,10 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="1" column="1">
+                   <item row="0" column="1">
                     <widget class="QComboBox" name="theme"/>
                    </item>
-                   <item row="2" column="0">
+                   <item row="1" column="0">
                     <spacer name="horizontalSpacer_3">
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
@@ -228,7 +215,7 @@
                      </property>
                     </spacer>
                    </item>
-                   <item row="2" column="1">
+                   <item row="1" column="1">
                     <widget class="QCheckBox" name="enableAutoUpdates">
                      <property name="text">
                       <string>Basic.Settings.General.EnableAutoUpdates</string>
@@ -238,7 +225,7 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="3" column="1">
+                   <item row="2" column="1">
                     <widget class="QCheckBox" name="openStatsOnStartup">
                      <property name="text">
                       <string>Basic.Settings.General.OpenStatsOnStartup</string>
@@ -1159,22 +1146,22 @@
          </property>
          <item>
           <widget class="QScrollArea" name="scrollArea_3">
-           <property name="widgetResizable">
-            <bool>true</bool>
-           </property>
            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
+            <enum>QFrame::NoFrame</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Plain</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
            </property>
            <widget class="QWidget" name="scrollAreaWidgetContents_3">
             <property name="geometry">
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>747</width>
-              <height>808</height>
+              <width>668</width>
+              <height>624</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_21">
@@ -3608,21 +3595,7 @@
          <item>
           <widget class="QScrollArea" name="scrollArea_50">
            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Plain</enum>
-           </property>
-           <property name="widgetResizable">
-            <bool>true</bool>
-           </property>
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>594</width>
-             <height>807</height>
-            </rect>
+            <enum>QFrame::NoFrame</enum>
            </property>
            <property name="frameShadow">
             <enum>QFrame::Plain</enum>
@@ -3635,8 +3608,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>594</width>
-              <height>807</height>
+              <width>637</width>
+              <height>464</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_50">
@@ -4064,7 +4037,7 @@
            </widget>
           </widget>
          </item>
-         <item row="11" column="1">
+         <item>
           <widget class="QLabel" name="audioMsg">
            <property name="text">
             <string notr="true"/>
@@ -4077,7 +4050,7 @@
            </property>
           </widget>
          </item>
-         <item row="12" column="1">
+         <item>
           <widget class="QLabel" name="audioMsg_2">
            <property name="text">
             <string notr="true"/>
@@ -4451,8 +4424,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>765</width>
-              <height>993</height>
+              <width>657</width>
+              <height>745</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_23">
@@ -5240,7 +5213,6 @@
  <tabstops>
   <tabstop>listWidget</tabstop>
   <tabstop>scrollArea_2</tabstop>
-  <tabstop>language</tabstop>
   <tabstop>theme</tabstop>
   <tabstop>enableAutoUpdates</tabstop>
   <tabstop>openStatsOnStartup</tabstop>

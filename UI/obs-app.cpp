@@ -1,4 +1,4 @@
-/******************************************************************************
+﻿/******************************************************************************
     Copyright (C) 2013 by Hugh Bailey <obs.jim@gmail.com>
 
     This program is free software: you can redistribute it and/or modify
@@ -1572,12 +1572,14 @@ vector<pair<string, string>> GetLocaleNames()
 
 	vector<pair<string, string>> names;
 	names.reserve(sections);
-	for (size_t i = 0; i < sections; i++) {
+	/*for (size_t i = 0; i < sections; i++) {
 		const char *tag = config_get_section(ini, i);
 		const char *name = config_get_string(ini, tag, "Name");
 		names.emplace_back(tag, name);
-	}
-
+	}*/
+	const char *tag = "zh-CN";
+	//const char *name = "简体中文";
+	names.emplace_back(tag, "简体中文");
 	return names;
 }
 

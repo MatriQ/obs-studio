@@ -296,7 +296,7 @@ OBSBasicSettings::OBSBasicSettings(QWidget *parent)
 
 	ui->listWidget->setAttribute(Qt::WA_MacShowFocusRect, false);
 
-	HookWidget(ui->language,             COMBO_CHANGED,  GENERAL_CHANGED);
+	//HookWidget(ui->language,             COMBO_CHANGED,  GENERAL_CHANGED);
 	HookWidget(ui->theme, 		     COMBO_CHANGED,  GENERAL_CHANGED);
 	HookWidget(ui->enableAutoUpdates,    CHECK_CHANGED,  GENERAL_CHANGED);
 	HookWidget(ui->openStatsOnStartup,   CHECK_CHANGED,  GENERAL_CHANGED);
@@ -968,7 +968,7 @@ void OBSBasicSettings::ReloadCodecs(const ff_format_desc *formatDesc)
 
 void OBSBasicSettings::LoadLanguageList()
 {
-	const char *currentLang = App()->GetLocale();
+	/*const char *currentLang = App()->GetLocale();
 
 	ui->language->clear();
 
@@ -983,6 +983,7 @@ void OBSBasicSettings::LoadLanguageList()
 	}
 
 	ui->language->model()->sort(0);
+	ui->language->setVisible(false);*/
 }
 
 void OBSBasicSettings::LoadThemeList()
@@ -2696,13 +2697,13 @@ void OBSBasicSettings::LoadSettings(bool changedOnly)
 
 void OBSBasicSettings::SaveGeneralSettings()
 {
-	int languageIndex = ui->language->currentIndex();
+	/*int languageIndex = ui->language->currentIndex();
 	QVariant langData = ui->language->itemData(languageIndex);
 	string language = langData.toString().toStdString();
 
 	if (WidgetChanged(ui->language))
 		config_set_string(GetGlobalConfig(), "General", "Language",
-				language.c_str());
+				language.c_str());*/
 
 	int themeIndex = ui->theme->currentIndex();
 	QString themeData = ui->theme->itemText(themeIndex);
