@@ -116,7 +116,7 @@
      <x>0</x>
      <y>0</y>
      <width>1079</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -138,30 +138,7 @@
     <property name="title">
      <string>Basic.MainMenu.Help</string>
     </property>
-    <widget class="QMenu" name="menuLogFiles">
-     <property name="title">
-      <string>Basic.MainMenu.Help.Logs</string>
-     </property>
-     <addaction name="actionShowLogs"/>
-     <addaction name="actionUploadCurrentLog"/>
-     <addaction name="actionUploadLastLog"/>
-     <addaction name="actionViewCurrentLog"/>
-    </widget>
-    <widget class="QMenu" name="menuCrashLogs">
-     <property name="title">
-      <string>Basic.MainMenu.Help.CrashLogs</string>
-     </property>
-     <addaction name="actionShowCrashLogs"/>
-     <addaction name="actionUploadLastCrashLog"/>
-    </widget>
-    <addaction name="actionHelpPortal"/>
-    <addaction name="actionWebsite"/>
-    <addaction name="actionDiscord"/>
     <addaction name="separator"/>
-    <addaction name="menuLogFiles"/>
-    <addaction name="menuCrashLogs"/>
-    <addaction name="separator"/>
-    <addaction name="actionCheckForUpdates"/>
     <addaction name="actionShowAbout"/>
     <addaction name="separator"/>
    </widget>
@@ -656,7 +633,7 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>64</width>
+           <width>74</width>
            <height>16</height>
           </rect>
          </property>
@@ -843,7 +820,7 @@
              <string notr="true"/>
             </property>
             <property name="icon">
-             <iconset resource="obs.qrc">
+             <iconset>
               <normaloff>:/res/images/add.png</normaloff>:/res/images/add.png</iconset>
             </property>
             <property name="flat">
@@ -878,7 +855,7 @@
              <string notr="true"/>
             </property>
             <property name="icon">
-             <iconset resource="obs.qrc">
+             <iconset>
               <normaloff>:/res/images/list_remove.png</normaloff>:/res/images/list_remove.png</iconset>
             </property>
             <property name="flat">
@@ -913,7 +890,7 @@
              <string notr="true"/>
             </property>
             <property name="icon">
-             <iconset resource="obs.qrc">
+             <iconset>
               <normaloff>:/res/images/configuration21_16.png</normaloff>:/res/images/configuration21_16.png</iconset>
             </property>
             <property name="flat">
@@ -1115,7 +1092,7 @@
   </widget>
   <action name="actionAddScene">
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/add.png</normaloff>:/res/images/add.png</iconset>
    </property>
    <property name="text">
@@ -1127,7 +1104,7 @@
   </action>
   <action name="actionAddSource">
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/add.png</normaloff>:/res/images/add.png</iconset>
    </property>
    <property name="text">
@@ -1139,7 +1116,7 @@
   </action>
   <action name="actionRemoveScene">
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/list_remove.png</normaloff>:/res/images/list_remove.png</iconset>
    </property>
    <property name="text">
@@ -1157,7 +1134,7 @@
   </action>
   <action name="actionRemoveSource">
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/list_remove.png</normaloff>:/res/images/list_remove.png</iconset>
    </property>
    <property name="text">
@@ -1178,7 +1155,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/properties.png</normaloff>:/res/images/properties.png</iconset>
    </property>
    <property name="text">
@@ -1190,7 +1167,7 @@
   </action>
   <action name="actionSceneUp">
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/up.png</normaloff>:/res/images/up.png</iconset>
    </property>
    <property name="text">
@@ -1205,7 +1182,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/up.png</normaloff>:/res/images/up.png</iconset>
    </property>
    <property name="text">
@@ -1217,7 +1194,7 @@
   </action>
   <action name="actionSceneDown">
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/down.png</normaloff>:/res/images/down.png</iconset>
    </property>
    <property name="text">
@@ -1232,7 +1209,7 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset resource="obs.qrc">
+    <iconset>
      <normaloff>:/res/images/down.png</normaloff>:/res/images/down.png</iconset>
    </property>
    <property name="text">

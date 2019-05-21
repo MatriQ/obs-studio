@@ -367,7 +367,8 @@ static void do_log(int log_level, const char *msg, va_list args, void *param)
 #endif
 }
 
-#define DEFAULT_LANG "en-US"
+//#define DEFAULT_LANG "en-US"
+#define DEFAULT_LANG "zh-CN"
 
 bool OBSApp::InitGlobalConfigDefaults()
 {
@@ -1316,22 +1317,22 @@ string OBSApp::GetVersionString() const
 		LIBOBS_API_PATCH_VER;
 
 #endif
-	ver << " (";
-
-#ifdef _WIN32
-	if (sizeof(void*) == 8)
-		ver << "64-bit, ";
-	else
-		ver << "32-bit, ";
-
-	ver << "windows)";
-#elif __APPLE__
-	ver << "mac)";
-#elif __FreeBSD__
-	ver << "freebsd)";
-#else /* assume linux for the time being */
-	ver << "linux)";
-#endif
+//	ver << " (";
+//
+//#ifdef _WIN32 
+//	if (sizeof(void*) == 8)
+//		ver << "64-bit, ";
+//	else
+//		ver << "32-bit, ";
+//
+//	ver << "windows)";
+//#elif __APPLE__
+//	ver << "mac)";
+//#elif __FreeBSD__
+//	ver << "freebsd)";
+//#else /* assume linux for the time being */
+//	ver << "linux)";
+//#endif
 
 	return ver.str();
 }
@@ -2341,7 +2342,7 @@ int main(int argc, char *argv[])
 			exit(0);
 
 		} else if (arg_is(argv[i], "--version", "-V")) {
-			std::cout << "OBS Studio - " << 
+			std::cout <<"JX - " << 
 				App()->GetVersionString() << "\n";
 			exit(0);
 		}

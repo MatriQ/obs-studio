@@ -275,7 +275,7 @@ OBSBasic::OBSBasic(QWidget *parent)
 	installEventFilter(shortcutFilter);
 
 	stringstream name;
-	name << "OBS " << App()->GetVersionString();
+	name << "JY 视频采集系统 " << App()->GetVersionString();
 	blog(LOG_INFO, "%s", name.str().c_str());
 	blog(LOG_INFO, "---------------------------------");
 
@@ -4772,7 +4772,7 @@ static BPtr<char> ReadLogFile(const char *subdir, const char *log)
 
 void OBSBasic::UploadLog(const char *subdir, const char *file)
 {
-	BPtr<char> fileString{ReadLogFile(subdir, file)};
+	/*BPtr<char> fileString{ReadLogFile(subdir, file)};
 
 	if (!fileString)
 		return;
@@ -4799,27 +4799,27 @@ void OBSBasic::UploadLog(const char *subdir, const char *file)
 	logUploadThread.reset(thread);
 	connect(thread, &RemoteTextThread::Result,
 			this, &OBSBasic::logUploadFinished);
-	logUploadThread->start();
+	logUploadThread->start();*/
 }
 
 void OBSBasic::on_actionShowLogs_triggered()
 {
-	char logDir[512];
+	/*char logDir[512];
 	if (GetConfigPath(logDir, sizeof(logDir), "obs-studio/logs") <= 0)
 		return;
 
 	QUrl url = QUrl::fromLocalFile(QT_UTF8(logDir));
-	QDesktopServices::openUrl(url);
+	QDesktopServices::openUrl(url);*/
 }
 
 void OBSBasic::on_actionUploadCurrentLog_triggered()
 {
-	UploadLog("obs-studio/logs", App()->GetCurrentLog());
+	/*UploadLog("obs-studio/logs", App()->GetCurrentLog());*/
 }
 
 void OBSBasic::on_actionUploadLastLog_triggered()
 {
-	UploadLog("obs-studio/logs", App()->GetLastLog());
+	/*UploadLog("obs-studio/logs", App()->GetLastLog());*/
 }
 
 void OBSBasic::on_actionViewCurrentLog_triggered()
@@ -4860,7 +4860,7 @@ void OBSBasic::on_actionCheckForUpdates_triggered()
 
 void OBSBasic::logUploadFinished(const QString &text, const QString &error)
 {
-	ui->menuLogFiles->setEnabled(true);
+	/*ui->menuLogFiles->setEnabled(true);
 
 	if (text.isEmpty()) {
 		OBSMessageBox::critical(this,
@@ -4875,7 +4875,7 @@ void OBSBasic::logUploadFinished(const QString &text, const QString &error)
 	obs_data_release(returnData);
 
 	OBSLogReply logDialog(this, logURL);
-	logDialog.exec();
+	logDialog.exec();*/
 }
 
 static void RenameListItem(OBSBasic *parent, QListWidget *listWidget,
@@ -6494,16 +6494,18 @@ void OBSBasic::UpdateTitleBar()
 	const char *sceneCollection = config_get_string(App()->GlobalConfig(),
 			"Basic", "SceneCollection");
 
-	name << "OBS ";
-	if (previewProgramMode)
-		name << "Studio ";
+	name << "JY 视频采集系统 ";
+	/*if (previewProgramMode)
+		name << "Studio "*/;
 
 	name << App()->GetVersionString();
-	if (App()->IsPortableMode())
-		name << " - Portable Mode";
+	/*if (App()->IsPortableMode())
+		name << " - Portable Mode";*/
 
-	name << " - " << Str("TitleBar.Profile") << ": " << profile;
-	name << " - " << Str("TitleBar.Scenes") << ": " << sceneCollection;
+	//配置文件
+	//name << " - " << Str("TitleBar.Profile") << ": " << profile;
+	//场景
+	//name << " - " << Str("TitleBar.Scenes") << ": " << sceneCollection;
 
 	setWindowTitle(QT_UTF8(name.str().c_str()));
 }
@@ -6788,7 +6790,7 @@ void OBSBasic::SystemTrayInit()
 {
 	trayIcon.reset(new QSystemTrayIcon(QIcon::fromTheme("obs-tray",
 			QIcon(":/res/images/obs.png")), this));
-	trayIcon->setToolTip("OBS Studio");
+	trayIcon->setToolTip("JX");
 
 	showHide = new QAction(QTStr("Basic.SystemTray.Show"),
 			trayIcon.data());
@@ -6856,7 +6858,7 @@ void OBSBasic::SysTrayNotify(const QString &text,
 	if (trayIcon && QSystemTrayIcon::supportsMessages()) {
 		QSystemTrayIcon::MessageIcon icon =
 				QSystemTrayIcon::MessageIcon(n);
-		trayIcon->showMessage("OBS Studio", text, icon, 10000);
+		trayIcon->showMessage("JX", text, icon, 10000);
 	}
 }
 
