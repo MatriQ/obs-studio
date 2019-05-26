@@ -9,7 +9,7 @@
 #include <string>
 #include <memory>
 
-#include <QDateTime>
+#include <QtCore/QDateTime>
 
 using namespace std;
 using namespace Gdiplus;
