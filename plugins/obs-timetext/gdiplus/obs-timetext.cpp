@@ -10,6 +10,7 @@
 #include <memory>
 
 #include <QtCore/QDateTime>
+#include <QString>
 
 using namespace std;
 using namespace Gdiplus;

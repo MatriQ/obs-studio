@@ -32,11 +32,11 @@ MESSAGE(STATUS "OBS_VERSION: ${OBS_VERSION}")
 
 if(INSTALLER_RUN)
 	set(CPACK_PACKAGE_EXECUTABLES
-		"obs32" "OBS Studio (32bit)"
-		"obs64" "OBS Studio (64bit)")
+		"JY" "OBS Studio (32bit)"
+		"JY" "OBS Studio (64bit)")
 	set(CPACK_CREATE_DESKTOP_LINKS
-		"obs32"
-		"obs64")
+		"JY"
+		"JY")
 else()
 	if(WIN32)
 		if(CMAKE_SIZEOF_VOID_P EQUAL 8)

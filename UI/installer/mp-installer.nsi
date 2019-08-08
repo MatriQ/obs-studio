@@ -195,7 +195,7 @@ Function PreReqCheck
 	notRunning1:
 
 	${if} ${RunningX64}
-		OBSInstallerUtils::IsProcessRunning "obs64.exe"
+		OBSInstallerUtils::IsProcessRunning "JY.exe"
 		IntCmp $R0 1 0 notRunning2
 			MessageBox MB_OK|MB_ICONEXCLAMATION "${APPNAME} is already running. Please close it first before installing a new version." /SD IDOK
 			Quit
@@ -268,19 +268,19 @@ Section "OBS Studio" SecCore
 
 	${if} ${RunningX64}
 		SetOutPath "$INSTDIR\bin\64bit"
-		CreateShortCut "$DESKTOP\OBS Studio.lnk" "$INSTDIR\bin\64bit\obs64.exe"
+		CreateShortCut "$DESKTOP\OBS Studio.lnk" "$INSTDIR\bin\64bit\JY.exe"
 	${else}
 		SetOutPath "$INSTDIR\bin\32bit"
-		CreateShortCut "$DESKTOP\OBS Studio.lnk" "$INSTDIR\bin\32bit\obs32.exe"
+		CreateShortCut "$DESKTOP\OBS Studio.lnk" "$INSTDIR\bin\32bit\JY.exe"
 	${endif}
 	SetOutPath "$INSTDIR\bin\32bit"
 	CreateDirectory "$SMPROGRAMS\OBS Studio"
-	CreateShortCut "$SMPROGRAMS\OBS Studio\OBS Studio (32bit).lnk" "$INSTDIR\bin\32bit\obs32.exe"
+	CreateShortCut "$SMPROGRAMS\OBS Studio\OBS Studio (32bit).lnk" "$INSTDIR\bin\32bit\JY.exe"
 	CreateShortCut "$SMPROGRAMS\OBS Studio\Uninstall.lnk" "$INSTDIR\uninstall.exe"
 
 	${if} ${RunningX64}
 		SetOutPath "$INSTDIR\bin\64bit"
-		CreateShortCut "$SMPROGRAMS\OBS Studio\OBS Studio (64bit).lnk" "$INSTDIR\bin\64bit\obs64.exe"
+		CreateShortCut "$SMPROGRAMS\OBS Studio\OBS Studio (64bit).lnk" "$INSTDIR\bin\64bit\JY.exe"
 	${endif}
 
 	SetOutPath "$INSTDIR\bin\32bit"
